@@ -1,0 +1,17 @@
+#
+# 服务器配置
+server:
+  # 端口
+  port: 84
+  # Servlet 配置
+  servlet:
+    # 项目名
+    context-path: /History-API
+#
+# Spring 配置
+spring:
+  #
+  # Thymeleaf 配置
+  thymeleaf:
+    # 缓存：禁用
+    cache: false
