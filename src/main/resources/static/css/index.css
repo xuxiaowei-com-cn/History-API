@@ -41,3 +41,8 @@
     /* 行内块元素 */
     display: inline-block;
 }
+
+/* 当前页面 */
+.a-this {
+    background-color: aliceblue;
+}

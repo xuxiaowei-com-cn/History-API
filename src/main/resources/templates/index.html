@@ -92,6 +92,8 @@
     function showMain(url, target) {
         $.get(url).done(function (data) {
             $(target).html(data)
+            $("a").removeClass('a-this') // 移除 this
+            $("a[href='#" + url + "']").addClass('a-this') // 添加 this
         })
     }
 
