@@ -1,17 +1,17 @@
 #
-# ·şÎñÆ÷ÅäÖÃ
+# æœåŠ¡å™¨é…ç½®
 server:
-  # ¶Ë¿Ú
+  # ç«¯å£
   port: 84
-  # Servlet ÅäÖÃ
+  # Servlet é…ç½®
   servlet:
-    # ÏîÄ¿Ãû
+    # é¡¹ç›®å
     context-path: /History-API
 #
-# Spring ÅäÖÃ
+# Spring é…ç½®
 spring:
   #
-  # Thymeleaf ÅäÖÃ
+  # Thymeleaf é…ç½®
   thymeleaf:
-    # »º´æ£º½ûÓÃ
+    # ç¼“å­˜ï¼šç¦ç”¨
     cache: false
