@@ -1,0 +1,43 @@
+/* 头部 */
+.xxw-header {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    height: 50px;
+    line-height: 50px;
+    width: calc(100% - 220px);
+    border-bottom-style: groove;
+}
+
+/* 侧边 */
+.xxw-aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    color: rgba(255, 255, 255, .7);
+    background-color: #20222A;
+}
+
+/* 主内容 */
+.xxw-main {
+    position: fixed;
+    top: 50px;
+    left: 220px;
+}
+
+/* 脚部居中 */
+.xxw-footer {
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+    text-align: center;
+}
+
+/* 不换行 */
+.d-i-b {
+    /* 行内块元素 */
+    display: inline-block;
+}
