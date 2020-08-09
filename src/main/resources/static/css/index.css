@@ -1,5 +1,5 @@
 /* 头部 */
-.xxw-header {
+#xxw-header {
     position: fixed;
     top: 0;
     left: 220px;
@@ -10,7 +10,7 @@
 }
 
 /* 侧边 */
-.xxw-aside {
+#xxw-aside {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -21,14 +21,14 @@
 }
 
 /* 主内容 */
-.xxw-main {
+#xxw-main {
     position: fixed;
     top: 50px;
     left: 220px;
 }
 
 /* 脚部居中 */
-.xxw-footer {
+#xxw-footer {
     position: fixed;
     bottom: 0;
     left: 220px;

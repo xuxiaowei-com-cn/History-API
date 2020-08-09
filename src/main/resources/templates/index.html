@@ -10,7 +10,7 @@
 <body>
 
 <!-- 头部内容 -->
-<header class="xxw-header">
+<header id="xxw-header">
 
     <div class="d-i-b">
         <button>展开</button>
@@ -22,7 +22,7 @@
 </header>
 
 <!-- 侧边 -->
-<aside class="xxw-aside">
+<aside id="xxw-aside">
     <div>
         <h1>此处为左侧导航栏</h1>
     </div>
@@ -38,10 +38,10 @@
 </aside>
 
 <!-- 主内容 -->
-<main class="xxw-main"></main>
+<main id="xxw-main"></main>
 
 <!-- 脚 -->
-<footer class="xxw-footer">
+<footer id="xxw-footer">
     <h1>Footer</h1>
 </footer>
 
@@ -60,14 +60,14 @@
         if (hash != null && hash.length > 1) { // 判断 hash 是否为空、最小长度是否大于 1
             const url = hash.substring(1, hash.length) // 需要展示的 URL
             if (url != null && url !== '' && url !== '/') { // 判断 URL 是否为空、是否为首页
-                showMain(url, '.xxw-main')
+                showMain(url, '#xxw-main')
             } else {
                 // hash 不符合要求时，强制显示某个页面
-                showMain('page/1', '.xxw-main')
+                showMain('page/1', '#xxw-main')
             }
         } else {
             // hash 不符合要求时，强制显示某个页面
-            showMain('page/1', '.xxw-main')
+            showMain('page/1', '#xxw-main')
         }
     })
 
@@ -79,7 +79,7 @@
         if (hash != null && hash.length > 1) { // 判断 hash 是否为空、最小长度是否大于 1
             const url = hash.substring(1, hash.length) // 需要展示的 URL
             if (url != null) {
-                showMain(url, '.xxw-main')
+                showMain(url, '#xxw-main')
             }
         }
     })
