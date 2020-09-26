@@ -56,29 +56,33 @@
      * 文档就绪函数
      */
     $(function () {
-        showMain('#xxw-main', 'page/1')
+        const currentHash = window.location.hash.slice(1) || 'page/1' || '/'; // 当前 hash
+        showNav('#xxw-main', 'page/1', 'a', "a[href='#" + currentHash + "']")
     })
 
     /**
      * 浏览器地址变化
      */
     window.addEventListener('popstate', function (e) {
-        showMain('#xxw-main', 'page/1')
+        const currentHash = window.location.hash.slice(1) || 'page/1' || '/'; // 当前 hash
+        showNav('#xxw-main', 'page/1', 'a', "a[href='#" + currentHash + "']")
     })
 
     /**
      * 展示页面
      * @param target 需要展示URL的位置
      * @param defaultHash 默认 hash 值
-     * @param thisClass 当前 class
+     * @param otherNav 其他导航栏，不为空
+     * @param thisNav 当前导航栏，不为空
+     * @param thisClass 当前 class，默认值：nav-this，可为空
      */
-    function showMain(target, defaultHash, thisClass) {
+    function showNav(target, defaultHash, otherNav, thisNav, thisClass) {
         const currentHash = window.location.hash.slice(1) || defaultHash || '/'; // 当前 hash
-        thisClass = thisClass || 'a-this' // this a class
+        thisClass = thisClass || 'nav-this' // this a class
         $.get(currentHash).done(function (data) { // 请求 hash
             $(target).html(data) // 页面显示
-            $("a").removeClass(thisClass) // 移除 this
-            $("a[href='#" + currentHash + "']").addClass(thisClass) // 添加 this
+            $(otherNav).removeClass(thisClass) // 移除 this
+            $(thisNav).addClass(thisClass) // 添加 this
         })
     }
 
