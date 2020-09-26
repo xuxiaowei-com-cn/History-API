@@ -79,10 +79,10 @@
     function showNav(target, defaultHash, otherNav, thisNav, thisClass) {
         const currentHash = window.location.hash.slice(1) || defaultHash || '/'; // 当前 hash
         thisClass = thisClass || 'nav-this' // this a class
+        $(otherNav).removeClass(thisClass) // 移除 this
+        $(thisNav).addClass(thisClass) // 添加 this
         $.get(currentHash).done(function (data) { // 请求 hash
             $(target).html(data) // 页面显示
-            $(otherNav).removeClass(thisClass) // 移除 this
-            $(thisNav).addClass(thisClass) // 添加 this
         })
     }
 
