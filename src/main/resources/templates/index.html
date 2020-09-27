@@ -50,6 +50,7 @@
 
 </body>
 
+<!--<script type="text/javascript" th:src="@{/js/jquery-3.5.0.min.js}"></script>-->
 <script type="text/javascript" th:src="@{/js/jquery-3.5.1.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/index.js}"></script>
 
@@ -86,11 +87,9 @@
         $(otherNav).removeClass(thisClass) // 移除 this
         $(thisNav).addClass(thisClass) // 添加 this
         $.get(currentHash).done(function (data) { // 请求 hash
-            // $(target).html(data) // 成功时，页面显示
+            $(target).html(data) // 成功时，页面显示
         }).fail(function (data) { //
-            // $(target).html(data.responseText) // 失败时，页面显示
-        }).always(function (data) { // 同 complete
-            $(target).html(data) // 无论如何，页面显示
+            $(target).html(data.responseText) // 失败时，页面显示
         });
     }
 
